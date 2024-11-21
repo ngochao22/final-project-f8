@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    container_name: f8-fe
+    image: node:23.0.0
+    working_dir: /app/web
+    volumes:
+      - './web:/app/web'
+    ports:
+      - '3000:3000'
+    command: ['npm', 'start']
